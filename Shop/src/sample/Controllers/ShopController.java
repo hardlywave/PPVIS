@@ -8,11 +8,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class RegisterController {
+public class ShopController {
 
     @FXML
     private ResourceBundle resources;
@@ -21,21 +20,27 @@ public class RegisterController {
     private URL location;
 
     @FXML
-    private Button registerButton;
+    private TextField searchField;
 
     @FXML
-    private TextField usernameField;
+    private Button searchButton;
 
     @FXML
-    private PasswordField passwordField;
+    private Button accountButton;
 
     @FXML
-    private TextField emailField;
+    private Button shopListButton;
+
+    @FXML
+    private Button infoCompanyButton;
+
+    @FXML
+    private Button contactsButton;
 
     @FXML
     void initialize() {
-        registerButton.setOnAction(event -> {
-            registerButton.getScene().getWindow().hide();
+        accountButton.setOnAction(event -> {
+            accountButton.getScene().getWindow().hide();
 
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/Fxml/Sample.fxml"));
@@ -49,6 +54,5 @@ public class RegisterController {
             stage.setScene(new Scene(root));
             stage.showAndWait();
         });
-
     }
 }
