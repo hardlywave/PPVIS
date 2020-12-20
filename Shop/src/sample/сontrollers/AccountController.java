@@ -1,4 +1,4 @@
-package sample.Controllers;
+package sample.сontrollers;
 
 import java.io.IOException;
 import java.net.URL;
@@ -11,7 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class ShopController {
+public class AccountController {
 
     @FXML
     private ResourceBundle resources;
@@ -26,7 +26,7 @@ public class ShopController {
     private Button searchButton;
 
     @FXML
-    private Button accountButton;
+    private Button outAccountButton;
 
     @FXML
     private Button shopListButton;
@@ -38,12 +38,18 @@ public class ShopController {
     private Button contactsButton;
 
     @FXML
+    private Button editeProfileButton;
+
+    @FXML
+    private Button infoCompanyButton1;
+
+    @FXML
     void initialize() {
-        accountButton.setOnAction(event -> {
-            accountButton.getScene().getWindow().hide();
+        outAccountButton.setOnAction(event -> {
+            outAccountButton.getScene().getWindow().hide();
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/Fxml/Sample.fxml"));
+            loader.setLocation(getClass().getResource("/sample/fxml/Shop.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {
