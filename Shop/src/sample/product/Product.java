@@ -1,6 +1,9 @@
 package sample.product;
 
 public class Product {
+
+    private KeyWord keyWord = new KeyWord();
+
     private int productId;
     private String productName;
     private String category;

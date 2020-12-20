@@ -1,8 +1,5 @@
 package sample.сontrollers;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,8 +8,28 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sample.product.Advertisement;
+import sample.product.Category;
+import sample.user.User;
 
-public class MainController {
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class SessionManager {
+
+    private SortController sortController = new SortController();
+    private SearchController searchController = new SearchController();
+    private KeyWordController keyWordController = new KeyWordController();
+    private Advertisement advertisementList = new Advertisement();
+    private Category categoryList = new Category();
+    private User user = new User();
+
+    void addCategory(Category category){}
+
+    boolean login(User user){
+        return false;
+    }
 
     @FXML
     private ResourceBundle resources;

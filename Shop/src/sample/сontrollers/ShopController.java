@@ -43,7 +43,7 @@ public class ShopController {
             accountButton.getScene().getWindow().hide();
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/Fxml/Sample.fxml"));
+            loader.setLocation(getClass().getResource("/sample/Fxml/Account.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {

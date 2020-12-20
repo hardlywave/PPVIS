@@ -9,6 +9,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class AccountController {
@@ -23,10 +25,10 @@ public class AccountController {
     private TextField searchField;
 
     @FXML
-    private Button searchButton;
+    private Button backButton;
 
     @FXML
-    private Button outAccountButton;
+    private Button searchButton;
 
     @FXML
     private Button shopListButton;
@@ -38,18 +40,33 @@ public class AccountController {
     private Button contactsButton;
 
     @FXML
+    private ImageView avatarImage;
+
+    @FXML
     private Button editeProfileButton;
 
     @FXML
-    private Button infoCompanyButton1;
+    private VBox accountVBox;
+
+    @FXML
+    private Button personalDataButton;
+
+    @FXML
+    private Button couponsButton;
+
+    @FXML
+    private Button activeOrdersButton;
+
+    @FXML
+    private Button archiveOrdersButton;
 
     @FXML
     void initialize() {
-        outAccountButton.setOnAction(event -> {
-            outAccountButton.getScene().getWindow().hide();
+        backButton.setOnAction(event -> {
+            backButton.getScene().getWindow().hide();
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/fxml/Shop.fxml"));
+            loader.setLocation(getClass().getResource("/sample/Fxml/Shop.fxml"));
             try {
                 loader.load();
             } catch (IOException e) {

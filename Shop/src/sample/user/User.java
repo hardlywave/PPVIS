@@ -1,8 +1,9 @@
 package sample.user;
 
-import sample.сontrollers.MainController;
+import sample.сontrollers.SessionManager;
 
-public class User extends MainController {
+public class User {
+
     private String userId;
     private String password;
     private String email;
